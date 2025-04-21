@@ -1,3 +1,6 @@
 from django.shortcuts import render
 
-# Create your views here.
+# welcome page
+
+def welcomepage(request):
+    return render (request, 'landing/welcome.html')
