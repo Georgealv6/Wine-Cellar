@@ -15,8 +15,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  background: url("/backend/static/images/wine-welcome.jpg") no-repeat center
-    center;
+  background: url("../images/wine-welcome.jpg") no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
 }
@@ -32,6 +31,16 @@ header {
 }
 
 header .logo {
+  position: relative;
+  color: #ffffff;
+  font-size: 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.logo-text {
   position: relative;
   color: #ffffff;
   font-size: 30px;
@@ -59,9 +68,11 @@ header .navigation a:not(:last-child) {
 header .navigation a:hover {
   background: rgb(103, 11, 11);
 }
+
 .content {
   max-width: 650px;
-  margin: 80px 100px;
+  margin: 450px auto 0 200px; /* top margin, horizontal center */
+  padding: 0 20px;
 }
 
 .content .info h2 {
