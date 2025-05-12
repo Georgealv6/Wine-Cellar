@@ -4,3 +4,6 @@ from django.shortcuts import render
 
 def welcomepage(request):
     return render (request, 'landing/welcome.html')
+
+def homepage(request):
+    return render(request, 'landing/home.html')

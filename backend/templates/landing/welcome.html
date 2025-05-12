@@ -1,4 +1,4 @@
-{% extends 'main.html' %} {% load static %}
+{% extends 'base.html' %} {% load static %}
 {% block title %}Socially Wined{% endblock %} 
 {% block content %}
 
@@ -9,7 +9,7 @@
       <h2>
         Sip. Share. Socialize.<br /><span>Sip Happens — Share It Here</span>
       </h2>
-      <a href="#" class="info-btn">Learn More</a>
+      <a href="{% url 'wine cellar:home' %}" class="info-btn">Learn More</a>
     </div>
   </div>
 </section>
