@@ -63,9 +63,9 @@ header .logo {
 
 .logo-text {
   color: #ffffff;
-  font-size: 40px;
+  font-size: 80px;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 650;
   letter-spacing: 2px;
 }
 
@@ -89,18 +89,37 @@ header .navigation a:hover {
 }
 
 .content {
-  max-width: 650px;
-  margin: 400px auto 0 200px; /* top margin, horizontal center */
+  max-width: 750px;
+  margin: 400px auto 0 auto; /* top margin, horizontal center */
   padding: 0 20px;
 }
 
 .content .info h2 {
   color: rgb(103, 11, 11);
-  font-size: 35px;
+  font-size: 40px;
   text-transform: uppercase;
   font-weight: 500;
   letter-spacing: 1px;
   line-height: 50px;
+  margin-bottom: 30px;
+}
+
+.content .info .titleh2 {
+  color: rgb(103, 11, 11);
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 1px;
+  line-height: 50px;
+  margin-bottom: 30px;
+}
+
+.content .info p {
+  color: #ffffff;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 300;
+  line-height: 25px;
   margin-bottom: 30px;
 }
 
@@ -197,6 +216,12 @@ label {
     bottom: -6px;
   }
 
+  .content {
+    margin: 350px auto 0 auto;
+    padding: 0 30px;
+    text-align: center;
+  }
+
   .content .info h2 {
     font-size: 35px;
     line-height: 50px;
@@ -280,6 +305,11 @@ label {
   header .logo {
     position: absolute;
     bottom: -6px;
+  }
+  .content {
+    margin: 300px auto 0 auto;
+    padding: 0 20px;
+    text-align: center;
   }
 
   .content .info h2 {
@@ -365,6 +395,12 @@ label {
   header .logo {
     position: absolute;
     bottom: -6px;
+  }
+
+  .content {
+    margin: 150px auto 0 auto;
+    padding: 0 15px;
+    text-align: center;
   }
 
   .content .info h2 {
