@@ -22,7 +22,6 @@
 }
 
 .home {
-  position: absolute;
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -33,18 +32,32 @@
   background-attachment: fixed;
 }
 
+.wine-collection {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: url("../images/wine-collection.jpg") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 header {
-  position: relative;
+  position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   padding: 30px 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 1000; /* make sure it stays above content */
+  background: rgba(0, 0, 0, 0.3); /* optional: translucent background */
+  backdrop-filter: blur(1px); /* optional: adds glass effect */
 }
 
 header .logo {
-  position: relative;
   color: #ffffff;
   font-size: 30px;
   text-decoration: none;
@@ -212,8 +225,8 @@ label {
   }
 
   header .logo {
-    position: absolute;
-    bottom: -6px;
+    font-size: 24px;
+    margin-top: 30px;
   }
 
   .content {
@@ -303,8 +316,8 @@ label {
   }
 
   header .logo {
-    position: absolute;
-    bottom: -6px;
+    font-size: 24px;
+    margin-top: 30px;
   }
   .content {
     margin: 300px auto 0 auto;
@@ -393,8 +406,8 @@ label {
   }
 
   header .logo {
-    position: absolute;
-    bottom: -6px;
+    font-size: 24px;
+    margin-top: 130px;
   }
 
   .content {
