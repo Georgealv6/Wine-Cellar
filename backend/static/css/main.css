@@ -8,6 +8,19 @@
   font-style: normal;
 }
 
+html,
+body {
+  overflow-y: scroll; /* still scrollable */
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  scrollbar-width: none; /* Firefox */
+}
+
 /* welcome page css portion */
 .welcome {
   position: absolute;
@@ -39,6 +52,28 @@
   flex-direction: column;
   justify-content: flex-start;
   background: url("../images/wine-collection.jpg") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.wine-blog {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: url("../images/wine-blog.jpg") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.wine-contact {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: url("../images/wine-contact.jpg") no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
 }
@@ -129,6 +164,15 @@ header .navigation a:hover {
 
 .content .info p {
   color: #ffffff;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 300;
+  line-height: 25px;
+  margin-bottom: 30px;
+}
+
+.content .info .color-b {
+  color: #000000;
   font-size: 15px;
   text-transform: uppercase;
   font-weight: 300;
