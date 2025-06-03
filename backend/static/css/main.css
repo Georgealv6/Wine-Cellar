@@ -122,7 +122,7 @@ header .navigation a {
   text-decoration: none;
   font-weight: 500;
   initial-letter: 1px;
-  padding: 5px 15px;
+  padding: 2px 15px;
   border-radius: 20px;
   transition: 0.3s;
   transition-property: background;
@@ -269,6 +269,7 @@ label {
   }
 
   header .logo {
+    position: absolute;
     font-size: 24px;
     margin-top: 30px;
   }
