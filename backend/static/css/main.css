@@ -202,6 +202,7 @@ label {
 
 #check {
   z-index: 3;
+  display: hidden;
 }
 
 /* for tablets & small laptops */
@@ -325,7 +326,7 @@ label {
   /* nav-bar adjustments when used on different screens */
 
   #check:checked ~ header .navigation {
-    z-index: 2;
+    z-index: 19;
     position: fixed;
     background: rgba(16, 3, 3, 0.651);
     top: 0;
@@ -350,7 +351,7 @@ label {
   }
 
   #check:checked ~ header label .close-btn {
-    z-index: 2;
+    z-index: 20;
     display: block;
     position: fixed;
   }
