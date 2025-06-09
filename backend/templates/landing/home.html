@@ -1,4 +1,5 @@
-{% extends 'main.html' %} {% load static %} {% block title %}Socially Wined{%endblock %} {% block content %}
+{% extends 'main.html' %} {% load static %} {% block title %}Socially Wined{%endblock %} 
+{% block content %}
 
 <section class="home" id="home">
   {% include 'navbar.html' %}
@@ -40,7 +41,7 @@
       <p class="color-b">
         Have a question or want to host a tasting event? We'd love to hear from you.
       </p>
-      {% comment %} <a href="{% url 'blog' %}">View Collection</a> {% endcomment %}
+      <a href="{% url 'wine cellar:contact' %}" class="info-btn">View Collection</a>
     </div>
   </div>
 </section>

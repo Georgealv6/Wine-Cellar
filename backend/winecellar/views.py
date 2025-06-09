@@ -7,3 +7,6 @@ def welcomepage(request):
 
 def homepage(request):
     return render(request, 'landing/home.html')
+
+def contactpage(request):
+    return render(request, 'landing/contact.html')
