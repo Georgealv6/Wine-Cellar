@@ -1,6 +1,17 @@
 {% extends 'main.html' %} {% load static %} {% block title %}Socially
 Wined{%endblock %} {% block content %}
 
-<section class="wine-contact">{% include 'navbar.html' %}</section>
+<section class="wine-contact">
+  {% include 'navbar.html' %}
+  <div class="content">
+    <div class="info">
+      <h2>We'd love to hear from you</h2>
+      <p>
+        Whether you're curious what wines you should start trying or even
+        general questions about our site
+      </p>
+    </div>
+  </div>
+</section>
 
 {% endblock %}
