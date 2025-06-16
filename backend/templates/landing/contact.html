@@ -6,10 +6,18 @@ Wined{%endblock %} {% block content %}
   <div class="content">
     <div class="info">
       <h2>We'd love to hear from you</h2>
-      <p>
+      <p class="color-b">
         Whether you're curious what wines you should start trying or even
         general questions about our site
       </p>
+      {% if submitted %}
+      <p class="color-b">Thank you! you message has been sent!</p>
+      {% endif %}
+
+      <form action="" method="post">
+        {% csrf_token %} {{ form.as_p }}
+        <button type="submit">SEND</button>
+      </form>
     </div>
   </div>
 </section>
