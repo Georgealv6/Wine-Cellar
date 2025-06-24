@@ -207,10 +207,9 @@ label {
 }
 
 #check {
-  z-index: 3;
-  display: hidden;
+  display: none;
 }
-
+/* ------------------------------------- @ media ------------------------------------- */
 /* for tablets & small laptops */
 @media (max-width: 1024px) {
   section {
@@ -251,6 +250,7 @@ label {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top: 80px;
   }
 
   #check:checked ~ header .navigation a {
@@ -275,10 +275,13 @@ label {
     position: absolute;
   }
 
+  header {
+    padding: 30px 45px; /* smaller padding for mobile */
+  }
+
   header .logo {
-    position: absolute;
     font-size: 24px;
-    margin-top: 30px;
+    margin-top: 0;
   }
 
   .content {
@@ -366,10 +369,12 @@ label {
   label .menu-btn {
     position: absolute;
   }
-
+  header {
+    padding: 30px 45px; /* smaller padding for mobile */
+  }
   header .logo {
     font-size: 24px;
-    margin-top: 30px;
+    margin-top: 0;
   }
   .content {
     margin: 300px auto 0 auto;
@@ -457,9 +462,13 @@ label {
     position: absolute;
   }
 
+  header {
+    padding: 30px 45px; /* smaller padding for mobile */
+  }
+
   header .logo {
     font-size: 24px;
-    margin-top: 130px;
+    margin-top: 0;
   }
 
   .content {
