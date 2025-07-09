@@ -3,8 +3,8 @@ Wined{%endblock %} {% block content %}
 
 <section class="wine-contact">
   {% include 'navbar.html' %}
-  <div class="content">
-    <div class="info">
+  <div class="contact-content">
+    <div class="form-box">
       <h2>We'd love to hear from you</h2>
       <p class="color-b">
         Whether you're curious what wines you should start trying or even
@@ -14,7 +14,7 @@ Wined{%endblock %} {% block content %}
       <p class="color-b">Thank you! you message has been sent!</p>
       {% endif %}
 
-      <form action="" method="post">
+      <form action="" method="post" class="">
         {% csrf_token %} {{ form.as_p }}
         <button type="submit">SEND</button>
       </form>
