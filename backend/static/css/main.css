@@ -216,7 +216,7 @@ label {
 .wine-contact .form-box {
   max-width: 600px;
   background: rgba(0, 0, 0, 0.3);
-  padding: 35px;
+  padding: 40px;
   margin: 0 auto;
   border-radius: 10px;
 }
@@ -235,6 +235,7 @@ label {
   margin-bottom: 10px;
   font-family: "Playfair Display", serif;
   align-items: center;
+  color: rgb(103, 11, 11);
 }
 
 .wine-contact .form-box form .wine-textarea {
@@ -245,16 +246,21 @@ label {
   background: transparent;
   margin-bottom: 10px;
   padding-top: 20px;
-  color: #fff;
+  color: rgb(103, 11, 11);
   outline: none;
   font-family: "Playfair Display", serif;
 }
 
+.wine-contact .form-box form .wine-input::placeholder,
+.wine-contact .form-box form .wine-textarea::placeholder {
+  color: #000; /* Light white */
+}
+
 .form-box form .wine-input[type="text"] {
-  width: 49%;
+  width: 50%;
 }
 .form-box form .wine-input[type="text"]:nth-child(2) {
-  float: right;
+  float: left;
 }
 .form-box form .wine-input[type="submit"] {
   background-color: rgb(103, 11, 11);
@@ -276,6 +282,15 @@ label {
   line-height: 50px;
   margin-bottom: 30px;
   text-align: center;
+}
+
+.wine-contact .form-box .color-b {
+  color: #000000;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 250;
+  line-height: 20px;
+  margin-bottom: 15px;
 }
 
 /* ------------------------------------- @ media ------------------------------------- */
