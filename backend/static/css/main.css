@@ -294,7 +294,42 @@ label {
 }
 
 /* ________________________________________login page____________________________________________ */
+.login-form {
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 50px;
+  height: 100%;
+  text-align: center;
+}
 
+.main-button {
+  border-radius: 20px;
+  border: 1px solid rgb(103, 11, 11);
+  background-color: rgb(103, 11, 11);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 15px 45px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+}
+
+.main-button:active {
+  transform: scale(0.95);
+}
+
+.main-button:focus {
+  outline: none;
+}
+
+.main-button.signupbtn {
+  background-color: transparent;
+  border-color: #ffffff;
+}
 /* ------------------------------------- @ media ------------------------------------- */
 /* for tablets & small laptops */
 @media (max-width: 1024px) {
