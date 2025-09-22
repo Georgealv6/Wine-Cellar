@@ -6,6 +6,6 @@ class Contactform(forms.Form):
     email = forms.EmailField(widget=forms.EmailInput(attrs={'placeholder':'Enter Email Here', 'class':'wine-input','type':'email'}))
     message = forms.CharField(widget=forms.Textarea(attrs={'placeholder':'Your Message','class':'wine-textarea', 'rows': 5}))
 
-class SignIn(forms.Form):
+# class SignIn(forms.Form):
 
-class SignUp(forms.Form):      
+# class SignUp(forms.Form):      

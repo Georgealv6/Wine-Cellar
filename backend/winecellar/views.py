@@ -10,6 +10,9 @@ def welcomepage(request):
 def homepage(request):
     return render(request, 'landing/home.html')
 
+def loginpage(request):
+    return render(request, 'landing/login.html')
+
 def contactpage(request):
     submitted = False
 
