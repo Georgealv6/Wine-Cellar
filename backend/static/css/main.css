@@ -224,6 +224,15 @@ label {
 .wine-contact .form-box form {
   width: 100%;
 }
+.form-row {
+  display: flex;
+  gap: 12;
+  width: 1000;
+}
+
+.form-row .wine-input {
+  width: 50%;
+}
 
 .wine-contact .form-box form .wine-input {
   width: 100%;
@@ -257,11 +266,10 @@ label {
 }
 
 .form-box form .wine-input[type="text"] {
-  width: 50%;
+  width: 100%;
+  float: none;
 }
-.form-box form .wine-input[type="text"]:nth-child(2) {
-  float: left;
-}
+
 .form-box form .wine-input[type="submit"] {
   background-color: rgb(103, 11, 11);
   color: #fff;
@@ -294,8 +302,34 @@ label {
 }
 
 /* ________________________________________login page____________________________________________ */
-.login-form {
-  background-color: #ffffff;
+
+/* Page wrapper */
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+.login-container #container.container {
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(103, 11, 11, 0.55);
+  border-radius: 12px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  position: relative;
+  overflow: hidden;
+  width: 820px;
+  max-width: 100%;
+  min-height: 520px;
+  backdrop-filter: blur(6px);
+}
+
+/* ========== Forms ========== */
+/* Sign-up form has no special class in your HTML, so target forms inside login */
+.login-container #container form,
+.login-container #container .login-form {
+  background: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -303,33 +337,244 @@ label {
   padding: 0 50px;
   height: 100%;
   text-align: center;
+  font-family: "Playfair Display", serif;
 }
 
-.main-button {
+.login-container #container h1 {
+  color: #fff;
+  margin: 0 0 10px;
+  letter-spacing: 0.5px;
+}
+
+.login-container #container span,
+.login-container #container p {
+  color: rgba(255, 255, 255, 0.85);
+  font-family: "Playfair Display", serif;
+}
+
+.login-container #container a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  margin: 12px 0;
+  font-size: 14px;
+}
+.login-container #container a:hover {
+  text-decoration: underline;
+}
+
+/* Inputs (wine theme) */
+.login-container #container input {
+  width: 100%;
+  height: 45px;
+  border: 1px solid rgb(103, 11, 11);
+  padding: 0 20px;
+  border-radius: 6px;
+  background: transparent;
+  margin: 8px 0;
+  font-family: "Playfair Display", serif;
+  color: #fff;
+  outline: none;
+}
+
+.login-container #container input::placeholder {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* ========== Buttons ========== */
+.login-container #container button {
   border-radius: 20px;
   border: 1px solid rgb(103, 11, 11);
   background-color: rgb(103, 11, 11);
   color: #ffffff;
   font-size: 12px;
   font-weight: bold;
-  padding: 15px 45px;
+  padding: 12px 45px;
   letter-spacing: 1px;
   text-transform: uppercase;
-  transition: transform 80ms ease-in;
+  transition: transform 80ms ease-in, opacity 120ms ease-in;
+  cursor: pointer;
+  margin-top: 10px;
 }
 
-.main-button:active {
-  transform: scale(0.95);
+.login-container #container button:active {
+  transform: scale(0.97);
 }
-
-.main-button:focus {
+.login-container #container button:focus {
   outline: none;
 }
 
-.main-button.signupbtn {
+.login-container #container .main-button {
+  border-radius: 20px;
+  border: 1px solid rgb(103, 11, 11);
+  background-color: rgb(103, 11, 11);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in, opacity 120ms ease-in;
+  cursor: pointer;
+}
+
+.login-container #container .main-button.signupbtn {
   background-color: transparent;
   border-color: #ffffff;
 }
+
+/* ========== Social icons container ========== */
+.login-container #container .social-container {
+  margin: 18px 0;
+}
+
+.login-container #container .social-container a.social {
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 6px;
+  height: 40px;
+  width: 40px;
+  color: #fff;
+  opacity: 0.9;
+}
+
+.login-container #container .social-container a.social:hover {
+  opacity: 1;
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+/* ========== Slider mechanics ========== */
+.login-container #container .form-container {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  transition: all 0.6s ease-in-out;
+}
+
+/* SIGN IN panel */
+.login-container #container .sign-in-container {
+  left: 0;
+  z-index: 2;
+}
+
+/* When active, slide sign-in out */
+.login-container #container.right-panel-active .sign-in-container {
+  transform: translateX(100%);
+}
+
+/* SIGN UP panel */
+.login-container #container .sign-up-container {
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+
+/* When active, show sign-up */
+.login-container #container.right-panel-active .sign-up-container {
+  transform: translateX(100%);
+  opacity: 1;
+  z-index: 5;
+  animation: loginShow 0.6s;
+}
+
+@keyframes loginShow {
+  0%,
+  49.99% {
+    opacity: 0;
+    z-index: 1;
+  }
+  50%,
+  100% {
+    opacity: 1;
+    z-index: 5;
+  }
+}
+
+/* ========== Overlay ========== */
+.login-container #container .overlay-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.6s ease-in-out;
+  z-index: 100;
+}
+
+.login-container #container.right-panel-active .overlay-container {
+  transform: translateX(-100%);
+}
+
+.login-container #container .overlay {
+  background: linear-gradient(
+    to right,
+    rgba(103, 11, 11, 0.92),
+    rgba(40, 0, 0, 0.92)
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 0;
+  color: #ffffff;
+  position: relative;
+  left: -100%;
+  height: 100%;
+  width: 200%;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+}
+
+.login-container #container.right-panel-active .overlay {
+  transform: translateX(50%);
+}
+
+.login-container #container .overlay-panel {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+}
+
+.login-container #container .overlay-left {
+  transform: translateX(-20%);
+}
+
+.login-container #container.right-panel-active .overlay-left {
+  transform: translateX(0);
+}
+
+.login-container #container .overlay-right {
+  right: 0;
+  transform: translateX(0);
+}
+
+.login-container #container.right-panel-active .overlay-right {
+  transform: translateX(20%);
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 900px) {
+  .login-container #container.container {
+    min-height: 560px;
+  }
+
+  .login-container #container form,
+  .login-container #container .login-form {
+    padding: 0 25px;
+  }
+}
+
 /* ------------------------------------- @ media ------------------------------------- */
 /* for tablets & small laptops */
 @media (max-width: 1024px) {
@@ -426,7 +671,7 @@ label {
   }
 }
 
-/* for mobile devices */
+/* for mobile devices --------------------------- */
 @media (max-width: 768px) {
   section {
     background-attachment: scroll;
@@ -516,9 +761,17 @@ label {
   content .info p {
     font-size: 15px;
   }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  .form-row .wine-input {
+    width: 100%;
+  }
 }
 
-/* for extra-small screens (phones in portrait mode) */
+/* for extra-small screens (phones in portrait mode) ------------------- */
 @media (max-width: 480px) {
   section {
     background-size: contain; /* Ensures the full image is visible */
@@ -610,5 +863,13 @@ label {
 
   content .info p {
     font-size: 20px;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  .form-row .wine-input {
+    width: 100%;
   }
 }

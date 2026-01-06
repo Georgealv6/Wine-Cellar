@@ -14,9 +14,14 @@ Wined{%endblock %} {% block content %}
       <p class="color-b">Thank you! you message has been sent!</p>
       {% endif %}
 
-      <form action="" method="post" class="">
-        {% csrf_token %} {{ form.as_p }}
-        <button type="submit">SEND</button>
+      <form action="" method="post">
+        {% csrf_token %}
+
+        <div class="form-row">{{ form.last_name }} {{ form.first_name }}</div>
+
+        {{ form.email }} {{ form.message }}
+
+        <button type="submit" class="wine-input send-btn">SEND</button>
       </form>
     </div>
   </div>

@@ -11,7 +11,7 @@ def homepage(request):
     return render(request, 'landing/home.html')
 
 def loginpage(request):
-    return render(request, 'landing/login.html')
+    return render(request, 'account/login.html')
 
 def contactpage(request):
     submitted = False
