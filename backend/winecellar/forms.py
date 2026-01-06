@@ -8,7 +8,7 @@ class Contactform(forms.Form):
     email = forms.EmailField(widget=forms.EmailInput(attrs={'placeholder':'Enter Email Here', 'class':'wine-input','type':'email'}))
     message = forms.CharField(widget=forms.Textarea(attrs={'placeholder':'Your Message','class':'wine-textarea', 'rows': 5}))
 
-class SignUpForm(forms.Form):
+class SignUpForm(UserCreationForm):
     email = forms.EmailField(required=True)
 
     class Meta:
@@ -23,4 +23,10 @@ class SignUpForm(forms.Form):
         self.fields["password1"].widget.attrs.update({"placeholder": "Password"})
         self.fields["password2"].widget.attrs.update({"placeholder": "Confirm Password"})
 
-# class LoginForm(forms.Form):      
+class LoginForm(AuthenticationForm):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        self.fields["username"].widget.attrs.update({"placeholder": "Username or Email"})
+        self.fields["password"].widget.attrs.update({"placeholder": "Password"})
+        
