@@ -28,6 +28,7 @@ def loginpage(request):
         else:
             messages.error(request, "Please fix the sign up errors below.")
 
+    # Login submission 
     elif request.method == "POST" and request.POST.get("form_type") == "login":
         login_form = LoginForm(request, data=request.POST)
         if login_form.is_valid():
@@ -37,7 +38,7 @@ def loginpage(request):
         else:
             messages.error(request, "Invalid login. Please try again.")  
           
-    return render(request, 'account/login.html')
+    return render(request, 'account/login.html', {"signup_form": signup_form, "login_form": login_form})
 
 def contactpage(request):
     submitted = False
