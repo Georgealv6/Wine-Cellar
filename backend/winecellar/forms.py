@@ -13,7 +13,7 @@ class SignUpForm(UserCreationForm):
 
     class Meta:
         model = User
-        fields = ("username","emaill","password1","password2")
+        fields = ("username","email","password1","password2")
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args,**kwargs)

@@ -1,5 +1,7 @@
-{% extends 'main.html' %} {% load static %} {% block title %}Socially Wined{%
-endblock %} {% block content %}
+{% extends 'main.html' %} {% load static %}
+ {% block title %} Socially Wined {% endblock %} 
+ 
+ {% block content %}
 
 <section class="login-container">
   <div class="container">
@@ -19,9 +21,57 @@ endblock %} {% block content %}
 
         <span>or use your email for registriation</span>
 
-        {{ signup_form.username }} {{ signup_form.email }} {{
-        signup_form.password1 }} {{ signup_form.password2 }}
+        {{ signup_form.username }} {{ signup_form.email }}
+        {{ signup_form.password1 }} {{ signup_form.password2 }}
+
+        {% if signup_form.errors %}
+        <div class="form-errors">{{signup_form.errors}}</div>
+        {% endif %}
+
+        <button type="submit">Sign Up</button>
       </form>
+    </div>
+
+    {% comment %} SIGN IN {% endcomment %}
+
+    <div class="form-container sign-in-container">
+      <form method="POST" action="" class="login-form">
+        {% csrf_token %}
+        <input type="hidden" name="form_type" value="login" />
+
+        <h1>Sign in</h1>
+
+        <div class="social-container">
+          <a href="#" class="social"></a>
+          <a href="#" class="social"></a>
+          <a href="#" class="social"></a>
+        </div>
+
+        <span>or use your account</span>
+
+        {{login_form.username}} {{login_form.password}}
+        
+        {% if login_form.non_field_errors %}
+        <div class="form-errors">{{ login_form.non_field_errors}}</div>
+        {% endif %}
+
+        <a href="">Forgot your passwork?</a>
+
+        <button type="submit" class="main-button">Sign In</button>
+      </form>
+    </div>
+
+    {% comment %} OVERLAY {% endcomment %}
+    <div class="overlay-container">
+      <div class="overlay">
+        <div class="overlay-pannel overlay-left">
+          <h1>Welcome Back!</h1>
+          <p>To keep connected with us please login with your personal info</p>
+          <button type="button" class="main-button signupbtn" id="signin">
+            Sign In
+          </button>
+        </div>
+      </div>
     </div>
   </div>
 </section>
