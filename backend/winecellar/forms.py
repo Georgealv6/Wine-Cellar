@@ -18,15 +18,15 @@ class SignUpForm(UserCreationForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args,**kwargs)
 
-        self.fields["username"].widget.attrs.update({"placeholder": "Name", "class": "wine-input","type": "text",})
-        self.fields["email"].widget.attrs.update({"placeholder": "Email","class": "wine-input","type": "email",})
-        self.fields["password1"].widget.attrs.update({"placeholder": "Password","class": "wine-input","type": "password",})
-        self.fields["password2"].widget.attrs.update({"placeholder": "Confirm Password", "class": "wine-input","type": "password",})
+        self.fields["username"].widget.attrs.update({"placeholder": "Name","type": "text",})
+        self.fields["email"].widget.attrs.update({"placeholder": "Email","type": "email",})
+        self.fields["password1"].widget.attrs.update({"placeholder": "Password","type": "password",})
+        self.fields["password2"].widget.attrs.update({"placeholder": "Confirm Password", "type": "password",})
 
 class LoginForm(AuthenticationForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
-        self.fields["username"].widget.attrs.update({"placeholder": "Username or Email", "class": "wine-input","type": "text" })
-        self.fields["password"].widget.attrs.update({"placeholder": "Password", "class": "wine-input","type": "password"})
+        self.fields["username"].widget.attrs.update({"placeholder": "Username or Email","type": "text" })
+        self.fields["password"].widget.attrs.update({"placeholder": "Password","type": "password"})
         
