@@ -14,6 +14,9 @@ def welcomepage(request):
 def homepage(request):
     return render(request, 'landing/home.html')
 
+def AboutUsPage(request):
+    return render(request, 'landing/about.html')
+
 def loginpage(request):
     signup_form = SignUpForm
     login_form = LoginForm

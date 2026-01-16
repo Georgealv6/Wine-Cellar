@@ -35,7 +35,7 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  background: url("../images/wine-welcome.jpg") no-repeat center center;
+  background: url("../images/aboutus.jpg") no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
 }
