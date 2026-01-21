@@ -37,4 +37,5 @@ section {
   background: url("../images/aboutus.jpg") no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
+  opacity: .90;
 }

@@ -7,11 +7,22 @@
 {% endblock  %}
 
 {% block content %}
+{% include 'navbar.html' %}
 <section class="about-us">
-    {% include 'navbar.html' %}
- <div class="div">
+    <div class="about-overlay"></div>
 
- </div>
+    <!--HERO-->
+    <header class="about-hero">
+        <h1>Wine Is Better When It's Shared</h1>
+        <p>
+            Socially Wined is a wine discovery platform where real people track, rate, and share the wines they drink-no expertise required.
+        </p>
+
+        <div class="about-hero-actions">
+            <a class="btn btn-primary" href="{% url 'signup' %}"> Create an account</a>
+            <a class="btn btn-ghost" href="{% url 'wine_collection' %}">Explore Wines</a>
+        </div>
+    </header>
 </section>
 
 
