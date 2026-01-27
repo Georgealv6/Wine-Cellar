@@ -10,19 +10,73 @@
 {% include 'navbar.html' %}
 <section class="about-us">
     <div class="about-overlay"></div>
+    
+    <div class="about-container">
 
-    <!--HERO-->
-    <header class="about-hero">
-        <h1>Wine Is Better When It's Shared</h1>
-        <p>
-            Socially Wined is a wine discovery platform where real people track, rate, and share the wines they drink-no expertise required.
-        </p>
+        <!--HERO-->
+        <header class="about-hero">
+            <h1>Wine Is Better When It's Shared</h1>
+            <p>
+                Socially Wined is a wine discovery platform where real people track, rate, and share the wines they drink-no expertise required.
+            </p>
 
-        <div class="about-hero-actions">
-            <a class="btn btn-primary" href="{% url 'signup' %}"> Create an account</a>
-            <a class="btn btn-ghost" href="{% url 'wine_collection' %}">Explore Wines</a>
-        </div>
-    </header>
+            <div class="about-hero-actions">
+                <a class="btn btn-primary" href="{% url 'wine cellar:login' %}"> Create an account</a>
+                <a class="btn btn-ghost" href="#">Explore Wines</a>
+            </div>
+        </header>
+        
+        <section class="about-section">
+            <h2>Why We Built This</h2>
+            <p>Wine can feel intimidating. Labels are confusing, ratings are inconsistent, and expert reviews don't always match real-world taste.</p>
+            <p>Socially Wined was created to change that. Instead of telling you what you <em>should</em> like, we show you what people actually enjoy-friends, strangers, and fellow wine lovers.</p>
+        </section>
+
+        <section class="about-section">
+            <h2>How It Works</h2>
+
+            <div class="how-grid">
+                <div class="how-card">
+                    <div class="how-icon">🍷</div>
+                    <h3>Drink Wine</h3>
+                    <p>Try something new or something familiar.</p>
+                </div>
+            </div>
+
+            <div class="how-card">
+                <div class="how-icon">⭐</div>
+                <h3>Rate &amp; Save</h3>
+                <p>Track what you loved (or didn't).</p>
+            </div>
+
+            <div class="how-card">
+                <div class="how-icon">👥</div>
+                <h3>Discover Together</h3>
+                <p>See what others are drinking and recommending.</p>
+            </div>
+        </section>
+
+        <section class="about-section">
+            <h2>Who It's for</h2>
+
+            <ul class="for-list">
+                <li>Curious beginners</li>
+                <li>Casual wine drinker</li>
+                <li>Enthusiast tracking their favorites</li>
+                <li>Anyone tired of guessing at the wine store</li>
+            </ul>
+        </section>
+
+        <section class="about-cta">
+            <h2>Ready to start your wine journey?</h2>
+            <p>Join the community and make your next bottle an easy win.</p>
+
+            <div class="about-hero-actions">
+                <a class="btn btn-primary" href="{% url 'wine cellar:login' %}">Create an account</a>
+                <a class="btn btn-ghost" href="#">Explore wines</a>
+            </div>
+        </section>
+    </div>
 </section>
 
 
