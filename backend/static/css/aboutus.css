@@ -28,14 +28,54 @@ section {
 }
 
 .about-us{
-  position: absolute;
+  position: relative;
   width: 100%;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  justify-content: flex;
   background: url("../images/aboutus.jpg") no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
-  opacity: .90;
+}
+
+.about-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.55);
+  z-index: 1;
+}
+
+.about-container {
+  position: relative;
+  z-index: 2;
+  width: min(1000px, 92%);
+  padding: 120pc 0 80px;
+  color: #f5f1ea;
+}
+
+.about-hero {
+  text-align: center;
+  padding: 28px 18px;
+  margin-bottom: 30px;
+}
+
+.about-hero h1 {
+  font-size: clamp(2rem, 3.6vw, 3.1rem);
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+}
+
+.about-hero p {
+  max-width: 760px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  opacity: 0.95;
+}
+.about-hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12;
+  margin-top: 18px;
+  flex: wrap;
 }
