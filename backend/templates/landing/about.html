@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="{% static 'css/aboutus.css' %}">
 {% endblock  %}
 
+
 {% block content %}
 {% include 'navbar.html' %}
 <section class="about-us">
@@ -14,7 +15,7 @@
     <div class="about-container">
 
         <!--HERO-->
-        <header class="about-hero">
+        <div class="about-hero">
             <h1>Wine Is Better When It's Shared</h1>
             <p>
                 Socially Wined is a wine discovery platform where real people track, rate, and share the wines they drink-no expertise required.
@@ -24,7 +25,7 @@
                 <a class="btn btn-primary" href="{% url 'wine cellar:login' %}"> Create an account</a>
                 <a class="btn btn-ghost" href="#">Explore Wines</a>
             </div>
-        </header>
+        </div>
         
         <section class="about-section">
             <h2>Why We Built This</h2>
@@ -41,18 +42,19 @@
                     <h3>Drink Wine</h3>
                     <p>Try something new or something familiar.</p>
                 </div>
-            </div>
+            
 
-            <div class="how-card">
-                <div class="how-icon">⭐</div>
-                <h3>Rate &amp; Save</h3>
-                <p>Track what you loved (or didn't).</p>
-            </div>
+                <div class="how-card">
+                    <div class="how-icon">⭐</div>
+                    <h3>Rate &amp; Save</h3>
+                    <p>Track what you loved (or didn't).</p>
+                </div>
 
-            <div class="how-card">
-                <div class="how-icon">👥</div>
-                <h3>Discover Together</h3>
-                <p>See what others are drinking and recommending.</p>
+                <div class="how-card">
+                    <div class="how-icon">👥</div>
+                    <h3>Discover Together</h3>
+                    <p>See what others are drinking and recommending.</p>
+                </div>
             </div>
         </section>
 

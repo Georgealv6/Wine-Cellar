@@ -32,7 +32,8 @@ section {
   width: 100%;
   min-height: 100vh;
   display: flex;
-  justify-content: flex;
+  justify-content: center;
+  align-items: flex-start;
   background: url("../images/aboutus.jpg") no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
@@ -49,7 +50,7 @@ section {
   position: relative;
   z-index: 2;
   width: min(1000px, 92%);
-  padding: 120pc 0 80px;
+  padding: 120px 0 80px;
   color: #f5f1ea;
 }
 
@@ -77,9 +78,9 @@ section {
 .about-hero-actions {
   display: flex;
   justify-content: center;
-  gap: 12;
+  gap: 12px;
   margin-top: 18px;
-  flex: wrap;
+  flex-wrap: wrap;
 }
 
 /* SECTIONS */
@@ -202,12 +203,99 @@ section {
 
 /* RESPONSIVE */
 
-@media (max-width: 900px) {
+/* Tablets */
+@media (max-width: 1024px) {
+  .about-container {
+    width: min(900px, 94%);
+    padding: 110px 0 70px;
+  }
+
+  .how-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Phones */
+@media (max-width: 700px) {
+  .about-container {
+    width: 92%;
+    padding: 95px 0 60px;
+  }
+
+  .about-hero {
+    padding: 22px 14px;
+    margin-bottom: 18px;
+  }
+
+  .about-hero h1 {
+    font-size: clamp(1.7rem, 6vw, 2.2rem);
+    line-height: 1.15;
+  }
+
+  .about-hero p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .about-section {
+    padding: 18px 16px;
+    border-radius: 12px;
+  }
+
+  .about-section h2,
+  .about-cta h2 {
+    font-size: 1.35rem;
+  }
+
   .how-grid {
     grid-template-columns: 1fr;
+    gap: 12px;
   }
-  
+
+  .how-card {
+    padding: 16px;
+  }
+
+  .about-hero-actions {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+  }
+
+  .for-list li {
+    padding: 12px 12px;
+  }
+
+  .about-cta {
+    padding: 20px 14px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 420px) {
   .about-container {
-    padding: 110px 0 70px;
+    padding: 85px 0 55px;
+  }
+
+  .about-hero h1 {
+    font-size: 1.65rem;
+  }
+
+  .about-section h2,
+  .about-cta h2 {
+    font-size: 1.25rem;
+  }
+}
+
+/* iOS Safari fix: background-attachment: fixed often breaks/jitters on mobile */
+@media (max-width: 900px) {
+  .about-us {
+    background-attachment: scroll;
   }
 }
