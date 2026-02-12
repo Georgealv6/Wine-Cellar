@@ -141,7 +141,7 @@ header .navigation a:not(:last-child) {
 }
 
 header .navigation a:hover {
-  background: rgb(103, 11, 11);
+  background: rgb(82, 11, 11);
 }
 
 .content {
@@ -151,7 +151,7 @@ header .navigation a:hover {
 }
 
 .content .info h2 {
-  color: rgb(103, 11, 11);
+  color: rgb(82, 11, 11);
   font-size: 40px;
   text-transform: uppercase;
   font-weight: 500;
@@ -161,7 +161,7 @@ header .navigation a:hover {
 }
 
 .content .info .titleh2 {
-  color: rgb(103, 11, 11);
+  color: rgb(82, 11, 11);
   font-size: 30px;
   text-transform: uppercase;
   font-weight: 300;
@@ -237,25 +237,25 @@ label {
 .wine-contact .form-box form .wine-input {
   width: 100%;
   height: 45px;
-  border: 1px solid rgb(103, 11, 11);
+  border: 1px solid rgb(82, 11, 11);
   padding: 0 20px;
   border-radius: 5px;
   background: transparent;
   margin-bottom: 10px;
   font-family: "Playfair Display", serif;
   align-items: center;
-  color: rgb(103, 11, 11);
+  color: rgb(82, 11, 11);
 }
 
 .wine-contact .form-box form .wine-textarea {
   width: 100%;
-  border: 1px solid rgb(103, 11, 11);
+  border: 1px solid rgb(82, 11, 11);
   padding: 0 20px;
   border-radius: 5px;
   background: transparent;
   margin-bottom: 10px;
   padding-top: 20px;
-  color: rgb(103, 11, 11);
+  color: rgb(82, 11, 11);
   outline: none;
   font-family: "Playfair Display", serif;
 }
@@ -271,7 +271,7 @@ label {
 }
 
 .form-box form .wine-input[type="submit"] {
-  background-color: rgb(103, 11, 11);
+  background-color: rgb(82, 11, 11);
   color: #fff;
   font-size: 18px;
 }
@@ -282,7 +282,7 @@ label {
 }
 
 .contact-content .form-box h2 {
-  color: rgb(103, 11, 11);
+  color: rgb(82, 11, 11);
   font-size: 30px;
   text-transform: uppercase;
   font-weight: 300;

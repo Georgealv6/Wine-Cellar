@@ -98,6 +98,7 @@ section {
 .about-cta h2 {
   font-size: 1.6rem;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .about-section p {
@@ -144,6 +145,7 @@ section {
   list-style: none;
   margin-top: 10px;
   display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 10px;
 }
 
@@ -152,6 +154,7 @@ section {
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 12px;
   padding: 12px 14px;
+  text-align: center;
 }
 
 /* CTA */
@@ -160,8 +163,6 @@ section {
   text-align: center;
   padding: 26px 18px;
   margin-top: 22px;
-
-  background: rgba(255, 255, 255, 0.45);
   border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 14px;
   backdrop-filter: blur(6px);
@@ -190,15 +191,19 @@ section {
 }
 
 .btn-primary {
-  background: rgb(103, 11, 11);
+  background: rgb(82, 11, 11);
   color: #f5f1ea;
   border: 1px solid rgba(0, 0, 0, 0.12);
 }
 
 .btn-ghost {
-  background: rgba(0, 0, 0, 0.08);
+  background: rgba(255, 255, 255, 0.08);
   color: #f5f1ea;
   border: 1px solid rgba(0, 0, 0, 0.18);
+}
+
+.btn-ghost:hover {
+  background: rgb(103, 11, 11);
 }
 
 /* RESPONSIVE */
