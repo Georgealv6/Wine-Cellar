@@ -14,10 +14,13 @@ def welcomepage(request):
 def homepage(request):
     return render(request, 'landing/home.html')
 
-def AboutUsPage(request):
+def AboutUs(request):
     return render(request, 'landing/about.html')
 
-def loginpage(request):
+def Blog(request):
+    return render(request, 'landing/blog.html')
+
+def Login(request):
     signup_form = SignUpForm
     login_form = LoginForm
 
@@ -43,7 +46,7 @@ def loginpage(request):
           
     return render(request, 'account/login.html', {"signup_form": signup_form, "login_form": login_form})
 
-def contactpage(request):
+def Contact(request):
     submitted = False
 
     if request.method == 'POST':

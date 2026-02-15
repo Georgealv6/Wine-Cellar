@@ -1,0 +1,17 @@
+{% extends 'main.html' %} {% load static %} 
+
+{% block title %}Socially Wined{%endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<section class="blog">
+  {% include 'navbar.html' %}
+  <div class="blog-overlay"></div>
+  
+</section>
+
+{% endblock %}
