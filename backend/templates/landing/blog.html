@@ -12,54 +12,136 @@
   {% include 'navbar.html' %}
   <div class="blog-overlay"></div>
 
-  <div class="blog-container">
+    <div class="blog-container">
 
-    <!--HERO / INTRO -->
-    <header class="blog-hero">
-        <p class="blog-kicker">SOCIALLY WINED JOURNAL</p>
-        <H1 class="blog-title">Stories, Reviews, and Guides</H1>
-        <p class="blog-subtitle">Wine, rated by the people who drink it. Discover bottle, pairings, and honest takes.</p>
-    </header>
+        <!--HERO / INTRO -->
+        <header class="blog-hero">
+            <p class="blog-kicker">SOCIALLY WINED JOURNAL</p>
+            <H1 class="blog-title">Stories, Reviews, and Guides</H1>
+            <p class="blog-subtitle">Wine, rated by the people who drink it. Discover bottle, pairings, and honest takes.</p>
+        </header>
 
-    <!--CONTROLS-->
-    <div class="blog-controls">
-        <div class="blog-search">
-            <input type="text" placeholder="Search posts (cabernet, pairing, beginner...)">
-            <button type="button" class="blog-btn blog-btn-primary">Search</button>
-        </div>
-
-        <div class="blog-filters">
-            <button class="chip chip-active" type="button">ALL</button>
-            <button class="chip" type="button">Reviews</button>
-            <button class="chip" type="button">Beginner Guides</button>
-            <button class="chip" type="button">Pairings</button>
-            <button class="chip" type="button">Culture</button>
-        </div>
-    </div>
-
-    <!---FEATURED POST-->
-    <section class="featured">
-        <a href="#" class="featured-card">
-            <div class="featured-image" style="background-image:url('{% static '../images/blog-feature.jpg' %}');"></div>
-
-            <div class="featured-content">
-                <span class="bagde">Featured</span>
-                <h2 class="featured-title">How to Choose Wine Without Overthinking It</h2>
-                <p class="feature-excerpt">A simple approach for ordering, shopping, and exploring wine confidently - no snob talk</p>
-            
-
-                <div class="meta">xw
-                    <span>By Writter</span>
-                    <span class="dot">•</span>
-                    <span>Feb 23, 2026</span>
-                    <span class="dot">•</span>
-                    <span>6 min read</span>
-                </div>
+        <!--CONTROLS-->
+        <div class="blog-controls">
+            <div class="blog-search">
+                <input type="text" placeholder="Search posts (cabernet, pairing, beginner...)">
+                <button type="button" class="blog-btn blog-btn-primary">Search</button>
             </div>
-        </a>
-    </section>
-  </div>
-  
+
+            <div class="blog-filters">
+                <button class="chip chip-active" type="button">ALL</button>
+                <button class="chip" type="button">Reviews</button>
+                <button class="chip" type="button">Beginner Guides</button>
+                <button class="chip" type="button">Pairings</button>
+                <button class="chip" type="button">Culture</button>
+            </div>
+        </div>
+
+        <!---FEATURED POST-->
+        <section class="featured">
+            <a href="#" class="featured-card">
+                <div class="featured-image" style="background-image:url('{% static '../images/blog-feature.jpg' %}');"></div>
+
+                <div class="featured-content">
+                    <span class="bagde">Featured</span>
+                    <h2 class="featured-title">How to Choose Wine Without Overthinking It</h2>
+                    <p class="feature-excerpt">A simple approach for ordering, shopping, and exploring wine confidently - no snob talk</p>
+                
+
+                    <div class="meta">
+                        <span>By Writter</span>
+                        <span class="dot">•</span>
+                        <span>Feb 23, 2026</span>
+                        <span class="dot">•</span>
+                        <span>6 min read</span>
+                    </div>
+                </div>
+            </a>
+        </section>
+
+        <!---POST GRID-->
+        <section class="posts">
+            <div class="section-head">
+                <h3>Lastest Posts</h3>
+                <p>New drops weekly - reviews, pairings, and what poeple are actually drinking.</p>
+            </div>
+
+            <div class="post-grid">
+
+                <article class="post-card">
+                    <a href="#" class="post-img" style="background-image:url('{% static '../images/wine-blog.jpg' %}');"></a>
+
+                    <div class="post-body">
+                        <div class="post-top">
+                            <span class="tag">Review</span>
+                            <span class="date">Feb 20, 2026</span>
+                        </div>
+                        <h4 class="post-title">A $15 Malbec Thank Drinks Like It's $30</h4>
+                        <p class="post-excerpt">Bold, smooth, and insanely food-frienly. Here's what surprised us and what to pair it with.</p>
+
+                        <div class="meta">
+                            <span>3 min read</span>
+                            <span class="dot">•</span>
+                            <span>12 comments</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="post-card">
+                <a href="#" class="post-img"
+                    style="background-image:url('{% static 'images/post2.jpg' %}');"></a>
+
+                <div class="post-body">
+                    <div class="post-top">
+                    <span class="tag">Pairings</span>
+                    <span class="date">Feb 18, 2026</span>
+                    </div>
+
+                    <h4 class="post-title"><a href="#">Wine & Taco Night: What Actually Works</a></h4>
+                    <p class="post-excerpt">
+                    Pairings that don’t get bullied by salsa, spice, and seasoning.
+                    </p>
+
+                    <div class="meta">
+                    <span>5 min read</span>
+                    <span class="dot">•</span>
+                    <span>8 comments</span>
+                    </div>
+                </div>
+                </article>
+                <article class="post-card">
+                <a href="#" class="post-img"
+                    style="background-image:url('{% static 'images/post3.jpg' %}');"></a>
+
+                <div class="post-body">
+                    <div class="post-top">
+                    <span class="tag">Beginner Guide</span>
+                    <span class="date">Feb 14, 2026</span>
+                    </div>
+
+                    <h4 class="post-title"><a href="#">Red Wine 101: 5 Things to Know</a></h4>
+                    <p class="post-excerpt">
+                    Tannins, body, sweetness, and why “dry” wine can still taste fruity.
+                    </p>
+
+                    <div class="meta">
+                    <span>7 min read</span>
+                    <span class="dot">•</span>
+                    <span>21 comments</span>
+                    </div>
+                </div>
+                </article>
+            </div>
+        </section>
+          <!-- PAGINATION -->
+        <nav class="pagination">
+        <a href="#" class="page disabled">Prev</a>
+        <a href="#" class="page active">1</a>
+        <a href="#" class="page">2</a>
+        <a href="#" class="page">3</a>
+        <a href="#" class="page">Next</a>
+        </nav>
+    </div>
 </section>
 
 {% endblock %}
